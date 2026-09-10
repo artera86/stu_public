@@ -33,30 +33,27 @@ Stu is being developed around five principles:
 - Local archival of completed coursework
 - Release gates and feature-to-test traceability
 
-## Academic cosmos
+## Degree visualization
 
-Stu includes an interactive visual model for understanding an entire degree:
+Stu is developing a degree-scale visual model intended to make academic structure and progress easier to navigate. The current design language uses a "cosmos" metaphor internally, with degree, semester, course, work, resource, and prerequisite relationships projected from the authoritative academic record.
 
-| Academic concept | Visual representation |
-| --- | --- |
-| Degree | Galaxy cluster |
-| Semester | Galaxy |
-| Course | Stellar population |
-| Assignment, exam, lab, or project | Star |
-| Subtasks and resources | Planetary system |
-| Prerequisite relationships | Filaments |
-
-The visualization is not a second database. It is a navigable projection of Stu's authoritative academic state.
+This visualization is not a second database, and its public-facing interaction model is still evolving.
 
 ## Architecture
 
 ![Stu system architecture](docs/stu-architecture.svg)
 
+The architecture graphic is embedded here as a sanitized view of the private implementation: versioned academic ingestion feeds the authoritative SQLite record, which supports deterministic planning, evidence-qualified recommendations, student actions, feedback, and visualization.
+
 ## Engineering evidence
 
-The private canonical implementation currently has a **74-test passing suite** covering its verified behavior and release checks. Development uses explicit specifications, reproducible checkpoints, severity policy, and feature-to-test traceability to keep product claims tied to evidence.
+The **release-candidate baseline passed 74 of 74 automated tests**. That number refers specifically to the release-candidate baseline and should not be read as a count of every verification activity performed afterward.
 
-A public test summary and sanitized demonstrations may be added here as the private-alpha release progresses.
+Later strict audits were run as separate verification passes. Manual acceptance was also performed separately from the automated suite. This distinction matters: automated regression evidence, stricter audit/review work, and hands-on acceptance each validate different aspects of the product.
+
+Development uses explicit specifications, reproducible checkpoints, severity policy, and feature-to-test traceability so public product claims remain tied to evidence without exposing private implementation details.
+
+See the sanitized [verification overview](docs/verification.md) for the public evidence model.
 
 ## Technology
 
@@ -65,6 +62,12 @@ A public test summary and sanitized demonstrations may be added here as the priv
 - Versioned JSON Schema contracts
 - Deterministic planning and recommendation logic
 - Automated verification
+
+## Documentation
+
+- [Architecture](docs/stu-architecture.svg)
+- [Verification overview](docs/verification.md)
+- [Documentation index](docs/README.md)
 
 ## Portfolio notice
 
